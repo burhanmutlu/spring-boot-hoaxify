@@ -1,13 +1,17 @@
 package com.hoaxify.ws.user;
 
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class User {
+@Entity
+public class Users { // User ismini kullanma özel isim çünkü karışıyor
+
+    @Id
+    @GeneratedValue
+    private long id;
 
     private String username;
     private String displayName;
